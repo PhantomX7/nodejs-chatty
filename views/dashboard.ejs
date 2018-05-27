@@ -1,0 +1,53 @@
+<% include ./partials/header %>
+<div class="container-fluid row justify-content-center" style="margin-top:10vh;">
+  <section class="form-elegant col-11">
+    <div class="card">
+      <div class="card-body mx-4" style="min-height:80vh">
+        <div class="row">
+          <!-- First column -->
+          <div class="col-4">
+            <h3>Room list:</h3>
+            <!-- Navigation -->
+            <div class="list-group" id="room-list" role="tablist">
+              <% rooms.forEach((room)=>{ %>
+                <a class="list-group-item list-group-item-action mb-2 amber-background" id="roomlist-<%= room.id %>" href="#<%= room.id %>" room="<%= room.id %>" role="tab" aria-controls="<%= room.name %>"><%= room.name %></a>
+              <% }) %>
+            </div>
+            <!-- Navigation -->
+          </div>
+          <div class="col-8">
+            <!-- Content -->
+            <div class="tab-content" id="nav-tabContent">
+              <% rooms.forEach((room)=>{ %>
+
+                  <div style="min-height:60vh" class="tab-pane fade card scrollable scrollbar-amber" id="<%= room.id %>" role="tabpanel" aria-labelledby="room-<%= room.name %>">
+                    <div class="card-body" id="<%= room.id %>-content">
+                      <!-- Content -->
+                      <h6 class="mb-0 ml-1">Kenichi:</h6>
+                      <div class="card amber-background z-depth-2 rounded-corner">
+                          <div class="card-body p-2">
+                              <p class="white-text p-1 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                  erat a ante.</p>
+                          </div>
+                      </div>
+                      <!-- End COntent -->
+                    </div>
+                  </div>
+              <% }) %>
+              <div id="chat" class="row p-5" style="display:none;">
+                <input id="input-message" class="form-control col-9" style="display: inline;" type="text" placeholder="Chat here">
+                <a id="send-message" class="btn-floating amber-background"><i class="fa fa-paper-plane"></i></a>
+              </div>
+            </div>
+            <!-- Content -->
+          </div>
+          <!-- Second column -->
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script type="text/javascript" src="/js/dashboard.js"></script>
+
+<% include ./partials/footer %>

@@ -1,0 +1,46 @@
+.intro {
+  height: 100vh;
+}
+
+.amber-background {
+  background-color: #fec66d !important;
+}
+
+input:focus:not([readonly]) + label {
+  color: #ffc107 !important;
+}
+
+input:focus:not([readonly]) {
+  border-bottom: 1px solid #ffc107 !important;
+  box-shadow: 0 1px 0 0 #ffc107 !important;
+}
+
+.rounded-corner {
+  border-radius: 20px !important;
+}
+
+/* SCROLLBAR */
+.scrollbar-amber::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.scrollbar-amber::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.scrollbar-amber::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffc107;
+}
+
+.scrollable {
+  position: relative;
+  overflow-y: scroll;
+  height: 200px;
+}
+
+/* END SCROLLBAR */

@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+<div class="container-fluid row justify-content-center" style="margin-top:20vh;">
+	<section class="form-elegant col-10 col-sm-8 col-md-6 col-xl-5">
+    <!--Form without header-->
+	    <div class="card">
+	        <div class="card-body mx-4">
+	            <!--Header-->
+	            <div class="text-center">
+	                <h3 class="amber-text mb-5"><strong>Sign up</strong></h3>
+	            </div>
+	            <!--Body-->
+							<form class="" action="/register" method="post">
+								<div class="md-form text-amber">
+		                <input type="text" class="form-control" name="username" required>
+		                <label>Username</label>
+		            </div>
+		            <div class="md-form">
+		                <input type="password" class="form-control" name="password" required>
+		                <label>Password</label>
+		            </div>
+                Already sign up? <a class="amber-text" href="/login">sign in</a>
+		            <div class="text-center my-3">
+		                <button type="submit" class="btn amber-background btn-block btn-rounded z-depth-1a">Sign in</button>
+		            </div>
+							</form>
+	        </div>
+	        <!--Footer-->
+	    </div>
+	    <!--/Form without header-->
+	</section>
+</div>
+<% include ./partials/footer %>
